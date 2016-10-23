@@ -60,19 +60,23 @@
 }
 
 /* Term reference fields. */
+.views-field-term-node-tid,
 .field-type-taxonomy-term-reference {
   margin-bottom: 1em;
 }
 
+.views-field-term-node-tid .field-label,
 .field-type-taxonomy-term-reference .field-label {
   font-size: 1em;
 }
 
+.views-field-term-node-tid ul,
 .field-type-taxonomy-term-reference ul {
   margin: 0;
   padding: 0;
 }
 
+.views-field-term-node-tid ul li,
 .field-type-taxonomy-term-reference ul li {
   display: inline;
   list-style: none;

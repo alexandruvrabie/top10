@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Top Features Product feature.
+ */
+
+include_once 'top_features_product.features.inc';

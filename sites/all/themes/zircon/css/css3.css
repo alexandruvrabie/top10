@@ -102,6 +102,7 @@
   border-radius: 0;
 }
 
+.views-field-term-node-tid ul li a,
 .field-type-taxonomy-term-reference ul li a,
 .article ul.links li.comment_forbidden a,
 #user-login-form .form-text,

@@ -491,3 +491,38 @@
 #page #credits {
   display: none;
 }
+
+/* Custom */
+h2.title-row {
+  font-size:24pt;
+}
+h2.title-row a {
+  margin-left: 10px;
+}
+.views-field-field-image {
+  float: left;
+  width: 30%;
+  margin: 0px;
+}
+.view .views-row .views-field-field-image img {
+  width: 100%;
+}
+.views-field-field-slogan {
+  float: left;
+  width: 30%;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.5em;
+}
+.views-field-body {
+  float: left;
+  width: 33%;
+  font-size: 1.5em;
+}
+.views-field-term-node-tid {
+  clear:both;
+  font-size: 1.5em;
+}
+.views-field-field-fivestar {
+  clear:both;
+}
