@@ -166,12 +166,10 @@
 }
 
 .block-custom-quote {
-  background: url(../images/bg-3.gif) 50% 100% no-repeat;
   padding: 0 0 6px 0;
 }
 
 .block-custom-quote .block-inner {
-  background: #fdfbe9;
   border-color: #dcd7bb;
   color: #766958;
   font-family: Georgia, "Times New Roman", Times, serif;
