@@ -526,3 +526,39 @@ h2.title-row a {
 .views-field-field-fivestar {
   clear:both;
 }
+
+.views-field-term-node-tid {
+  float:left;
+  width:50%;
+}
+
+.views-field-field-share-buttons {
+  float:right;
+  width:50%;
+}
+.views-field-field-share-buttons .field-content{
+  float:right;
+}
+
+.left-side {
+  float: left;
+  width: 50%;
+}
+
+.buttons-side {
+  padding: 20px 0;
+}
+
+.buttons-side .field-buttons{
+  float: left;
+  width: auto;
+}
+
+.right-side {
+  float: left;
+  width: 50%;
+}
+
+.content-side {
+  clear: both;
+}
