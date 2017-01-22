@@ -512,7 +512,6 @@ h2.title-row a {
   width: 30%;
   margin-left: 15px;
   margin-right: 15px;
-  font-size: 1.5em;
 }
 .views-field-body {
   float: left;
@@ -551,7 +550,13 @@ h2.title-row a {
 
 .buttons-side .field-buttons{
   float: left;
-  width: auto;
+  width: 100%;
+}
+
+.buttons-side .field-name-field-share-buttons {
+  float: left;
+  width: 100%;
+  margin-top:10px;
 }
 
 .right-side {
