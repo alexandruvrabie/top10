@@ -95,24 +95,25 @@
       <div class="left-side">
         <?php print render($content['field_image']); ?>
       </div>
-      <div class="right-side fs-largest">
+      <div class="right-side">
         <?php print render($content['field_slogan']); ?>
           <div class="buttons-side">
-            <?php print render($content['field_share_buttons']); ?>
             <div class="field-buttons">
               <?php print l(t('Order Now'), 'node/' . $field_order_redirect[0]['target_id']); ?>
               <?php print l(t('More Info'), 'node/' . $field_order_redirect[0]['target_id']); ?>
             </div>
+              <?php print render($content['field_share_buttons']); ?>
             <div class="clearfix"></div>
         </div>
         <?php print render($content['field_tags']); ?>
       </div>
-      <div class="content-side fs-largest">
-        <?php print render($content['body']); ?>
-        <?php print render($content['field_ingredients']); ?>
-        <?php print render($content['field_fivestar']); ?>
+      <div class="content-side">
+          <?php print render($content['group_product']); ?>
+          <?php print render($content['body']); ?>
+          <?php print render($content['field_ingredients']); ?>
+          <?php print render($content['field_fivestar']); ?>
           <h3 class="field-label">Reviews:&nbsp;</h3>
-        <?php print render($content['facebook_comments']); ?>
+        <?php print render($content['comments']); ?>
       </div>
   </div>
 </div>
