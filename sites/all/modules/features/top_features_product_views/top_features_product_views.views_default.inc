@@ -31,6 +31,10 @@ function top_features_product_views_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_order_redirect_target_id']['id'] = 'field_order_redirect_target_id';
+  $handler->display->display_options['relationships']['field_order_redirect_target_id']['table'] = 'field_data_field_order_redirect';
+  $handler->display->display_options['relationships']['field_order_redirect_target_id']['field'] = 'field_order_redirect_target_id';
   /* Field: Global: View result counter */
   $handler->display->display_options['fields']['counter']['id'] = 'counter';
   $handler->display->display_options['fields']['counter']['table'] = 'views';
@@ -92,31 +96,58 @@ function top_features_product_views_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: Rate */
-  $handler->display->display_options['fields']['field_fivestar']['id'] = 'field_fivestar';
-  $handler->display->display_options['fields']['field_fivestar']['table'] = 'field_data_field_fivestar';
-  $handler->display->display_options['fields']['field_fivestar']['field'] = 'field_fivestar';
-  $handler->display->display_options['fields']['field_fivestar']['label'] = '';
-  $handler->display->display_options['fields']['field_fivestar']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_fivestar']['click_sort_column'] = 'rating';
-  $handler->display->display_options['fields']['field_fivestar']['settings'] = array(
-    'widget' => array(
-      'fivestar_widget' => 'sites/all/modules/contrib/fivestar/widgets/basic/basic.css',
-    ),
-    'expose' => 0,
-    'style' => 'average',
-    'text' => 'average',
-  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node_1']['id'] = 'view_node_1';
+  $handler->display->display_options['fields']['view_node_1']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node_1']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node_1']['relationship'] = 'field_order_redirect_target_id';
+  $handler->display->display_options['fields']['view_node_1']['label'] = '';
+  $handler->display->display_options['fields']['view_node_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node_1']['text'] = 'Order Now';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'More Info';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[view_node_1][view_node]';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'field-buttons';
+  $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
   /* Field: Content: All taxonomy terms */
   $handler->display->display_options['fields']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['fields']['term_node_tid']['label'] = 'Tags';
-  $handler->display->display_options['fields']['term_node_tid']['element_type'] = '0';
+  $handler->display->display_options['fields']['term_node_tid']['element_label_type'] = 'div';
+  $handler->display->display_options['fields']['term_node_tid']['element_label_class'] = 'tag-label';
   $handler->display->display_options['fields']['term_node_tid']['type'] = 'ul';
+  $handler->display->display_options['fields']['term_node_tid']['separator'] = '';
   $handler->display->display_options['fields']['term_node_tid']['limit'] = TRUE;
   $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
     'tags' => 'tags',
+  );
+  /* Field: Content: Share buttons */
+  $handler->display->display_options['fields']['field_share_buttons']['id'] = 'field_share_buttons';
+  $handler->display->display_options['fields']['field_share_buttons']['table'] = 'field_data_field_share_buttons';
+  $handler->display->display_options['fields']['field_share_buttons']['field'] = 'field_share_buttons';
+  $handler->display->display_options['fields']['field_share_buttons']['label'] = '';
+  $handler->display->display_options['fields']['field_share_buttons']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_share_buttons']['type'] = 'addthis_basic_toolbox';
+  $handler->display->display_options['fields']['field_share_buttons']['settings'] = array(
+    'share_services' => 'preferred_1,preferred_2,preferred_3,preferred_4,compact',
+    'buttons_size' => 'addthis_32x32_style',
+    'counter_orientation' => 'horizontal',
+    'extra_css' => '',
   );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

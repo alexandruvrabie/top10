@@ -63,14 +63,19 @@
 }
 
 .field-buttons a {
-  display:block;
-  float:left;
-  width:120px;
-  background: yellow;
+  display: block;
+  float: left;
+  width: 120px;
+  background: #c01700;
   margin: 0 10px;
-  padding:10px;
+  padding: 5px;
   font-size: 1.5em;
   text-align: center;
+  color: #fff;
+}
+
+.field-buttons a:hover {
+  color: #fff;
 }
 
 .ai-l .field-type-image {
