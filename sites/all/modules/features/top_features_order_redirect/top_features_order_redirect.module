@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Top Features Order Redirect feature.
+ */
+
+include_once 'top_features_order_redirect.features.inc';
