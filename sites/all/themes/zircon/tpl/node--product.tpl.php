@@ -105,14 +105,14 @@
               <?php print render($content['field_share_buttons']); ?>
             <div class="clearfix"></div>
         </div>
-        <?php print render($content['field_tags']); ?>
+          <?php print render($content['field_official_product_name']); ?>
       </div>
       <div class="content-side">
           <?php print render($content['group_product']); ?>
           <?php print render($content['body']); ?>
           <?php print render($content['field_ingredients']); ?>
           <?php print render($content['field_fivestar']); ?>
-          <h3 class="field-label">Reviews:&nbsp;</h3>
+          <h3 class="field-label"><?php print t("Reviews:") ?></h3>
         <?php print render($content['comments']); ?>
       </div>
   </div>
